@@ -1,0 +1,226 @@
+@import 'config';
+@import 'utilities';
+
+*
+{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+html, body
+{
+    font-family: 'Space Mono';
+    font-size: $default-font-size
+}
+
+main
+{
+    height: 100vh;
+    background-color: $light-grayish-cyan;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input, button
+{
+    font-size: $default-font-size;
+    outline: none;
+    border:2px solid transparent;
+    font-family: 'Space Mono';
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] 
+{
+    -moz-appearance: textfield;
+    color: $very-dark-cyan;
+    background-color: $very-light-grayish-cyan;
+    text-align: right;
+    padding: 5px 15px;
+    border-radius: 6px;
+}
+
+input[type=number]::placeholder
+{
+    color: $grayish-cyan;
+}
+
+input[type=number]:hover
+{
+    cursor: pointer;
+}
+
+input[type=number]:focus
+{
+    border: solid 2px $strong-cayn;
+}
+
+h1
+{
+    color: $very-dark-cyan;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    margin: 2.3em 0;
+}
+
+.calculator
+{
+    background-color: #fff;
+    border-radius: 30px;
+    width: 48vw;
+    max-width: 926px;
+    box-shadow: 0px 13px 47px 4px rgba(66, 68, 90, 0.2);
+
+    .title
+    {
+        font-size: 0.6rem;
+        word-spacing: 0.3em;
+    }
+
+    .title-light
+    {
+        color: $very-light-grayish-cyan;
+    }
+
+    .title-dark
+    {
+        color: $dark-grayish-cyan;
+    }
+
+    .title-error
+    {
+        color: #f00;
+    }
+
+    .title-person
+    {
+        color: $grayish-cyan;
+    }
+
+    .btn
+    {
+        border-radius: 6px;
+        background-color: $very-dark-cyan;
+        color: $very-light-grayish-cyan;
+    }
+
+    .btn:hover
+    {
+        cursor: pointer;
+        color: $very-dark-cyan;
+        background-color:  lighten($strong-cayn, 30%);
+    }
+
+    .calculator-user-input
+    {
+        padding: 46px;
+        width: 55%;
+        .input-field
+        {
+            
+
+            .input-field-text-group
+            {
+                margin-bottom: 0.3em;
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .input
+            {
+                position: relative;
+    
+                .input-icon
+                {
+                    position: absolute;
+                    top: 35%;
+                    left: 15px;
+                }
+
+                input
+                {
+                    width: 100%;
+                }
+            }
+    
+        }
+    
+        .calculator-tip-buttons
+        {
+            margin: 1.6em 0;
+    
+            .title
+            {
+                margin-bottom: 1em;
+            }
+
+            .tip-options-grid
+            {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 0.6em;
+
+                input
+                {
+                    width: 100%;
+                }
+
+                input[type=number]::placeholder
+                {
+                    color: $dark-grayish-cyan;
+                }
+
+            }
+        }
+    }
+
+    .calculator-result
+    {
+        width: 45%;
+        background-color: $very-dark-cyan;
+        border-radius: 18px;
+        flex-direction: column;
+        margin: 30px 30px 30px 0;
+
+        .result-field
+        {
+            justify-content: space-between;
+            align-items: center;
+
+            .result-value
+            {
+                color: $strong-cayn;
+                font-size: 1.9rem;
+            }
+        }
+
+        .result-field:nth-child(2)
+        {
+            margin-top: 1.5em;
+        }
+
+        .reset-btn
+        {
+            padding: 0.4em;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-top: auto;
+            background-color: lighten($very-dark-cyan, 4%);
+            color: rgba($very-dark-cyan, 0.8);
+            cursor: default;
+        }
+    }
+   
+}
+
+@import 'mobile';
