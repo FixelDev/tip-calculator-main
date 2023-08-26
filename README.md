@@ -20,8 +20,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/FixelDev/tip-calculator-main)
-- Live Site URL: [Add live site URL here](https://fixeldev.github.io/tip-calculator-main/)
+- Solution URL: [https://github.com/FixelDev/tip-calculator-main]
+- Live Site URL: [https://fixeldev.github.io/tip-calculator-main/]
 
 ## My process
 
